@@ -1,0 +1,201 @@
+
+<!-- saved from url=(0119)http://results.jntuh.ac.in/jsp/SearchResult.jsp?degree=btech&examCode=1716&etype=r17&result=gradercrv&type=rcrvintgrade -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script>
+function capitalizeMe(element) {
+element.value = element.value.toUpperCase();
+}
+</script>
+<style>
+
+.ui-datepicker {
+width: 15em;
+padding: .2em .2em 0;
+display: none;
+background: #818484;
+}
+.ui-datepicker .ui-datepicker-title {
+margin: 0 2.3em;
+line-height: 1.2em;
+text-align: center;
+color:#FFFFFF;
+background:#2F99B4;
+}
+.ui-datepicker table {
+width: 70%;
+font-size: .5em;
+border-collapse: collapse;
+font-family: sans-serif;
+margin: 0 0 .4em;
+color:#000000;
+background:#9EEFEE;
+}
+/*This is date TD */
+.ui-datepicker td {
+ 
+border: 0;
+padding: 1px;
+ 
+ 
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+display: block;
+padding: .8em;
+text-align: right;
+text-decoration: underline;
+}
+
+table {
+	float: center;
+	border-color: black;
+	-webkit-border-radius: 25px;
+}
+
+</style>
+
+
+<title>RESULTS</title>
+
+<link rel="stylesheet" href="./jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="./MyStyle.css">
+
+
+<script src="./jquery.min.js.download"></script>
+<script src="./jquery-ui.min.js.download"></script>
+<script type="text/javascript" src="./resultsearch.js.download">
+    </script>
+
+<script type="text/javascript" src="./fkeys.js.download">
+    </script>
+    
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HallTicket Page</title>
+  <script>
+    function formvalidation() {
+      var htno = document.getElementById('htno').value;
+      // Add any additional validation if needed
+
+      // Assuming the HTML page for each HallTicket Number is named "hallticket_number.html"
+      window.location.href = htno + '.html';
+      return false; // Prevent form submission
+    }
+
+    function capitalizeMe(input) {
+      // Add logic for capitalizing input if needed
+    }
+
+    function DrawCaptcha() {
+      // Add logic for drawing captcha if needed
+    }
+  </script>
+</head>
+<body onload="DrawCaptcha();" oncontextmenu="return false">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HallTicket Page</title>
+  <script>
+    function formvalidation() {
+      var htno = document.getElementById('htno').value;
+      // Add any additional validation if needed
+
+      // Assuming the HTML page for each HallTicket Number is named "hallticket_number.html"
+      var resultUrl = htno + '.html';
+      window.open(resultUrl, '_blank');
+      return false; // Prevent form submission
+    }
+
+    function capitalizeMe(input) {
+      // Add logic for capitalizing input if needed
+    }
+
+    function DrawCaptcha() {
+      // Add logic for drawing captcha if needed
+    }
+  </script>
+</head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HallTicket Page</title>
+  <script>
+    function formvalidation() {
+      var htno = document.getElementById('htno').value;
+      // Add any additional validation if needed
+
+      // Assuming the HTML page for each HallTicket Number is named "hallticket_number.html"
+      var resultUrl = htno + '.html';
+      window.open(resultUrl, '_blank');
+      return false; // Prevent form submission
+    }
+
+    function capitalizeMe(input) {
+      // Add logic for capitalizing input if needed
+    }
+
+    function DrawCaptcha() {
+      var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      var captcha = '';
+      for (var i = 0; i < 8; i++) {
+        captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+
+      document.getElementById('txtCaptcha').value = captcha;
+    }
+  </script>
+</head>
+<body onload="DrawCaptcha();" oncontextmenu="return false">
+
+  <form id="myForm" name="searchResult" action="" onsubmit="return formvalidation()" method="post">
+    <br>
+    <br>
+    <br>
+    <div class="CommentBox" align="center">
+      <input type="hidden" name="degree" value="btech">
+      <input type="hidden" name="examCode" value="1716">
+      <!-- Other hidden fields -->
+
+      <table style="width: 55%; height: 55%; text-align: left; float: center; background-color: #d0e4fe; border-style: outset; border-color: black;">
+        <tbody>
+          <tr>
+            <td>Enter HallTicket Number</td>
+            <td>
+              <input type="text" name="htno" required="required" onkeyup="capitalizeMe(this);" id="htno" min="1" max="10">
+            </td>
+            <td><div style="color: #FF0000;"></div></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Enter Date of Birth</td>
+            <td><input type="text" required="" id="datepicker" value="" class="hasDatepicker"></td>
+            <td>YYYY/MM/DD</td>
+          </tr>
+          <tr>
+            <td>Please enter this Captcha code in below TextBox</td>
+            <td><input type="text" id="txtCaptcha" style="color: #4e2016; text-align: center; border: darkline; font-weight: bold; font-family: Modern" disabled="disabled"></td>
+            <td><input type="button" id="btnrefresh" value="Refresh" onclick="DrawCaptcha();"><br></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="text" id="txtInput" required="required"></td>
+            <td><input type="submit" value="Submit"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+  </form>
+
+  <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+</body>
+</html>
